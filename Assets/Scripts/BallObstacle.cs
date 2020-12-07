@@ -35,4 +35,6 @@ public class BallObstacle : MonoBehaviour
             timer = timeToApplyForce;
         }
     }
+
+
 }

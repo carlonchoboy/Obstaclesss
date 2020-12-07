@@ -45,9 +45,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.X) && isGrounded())
         {
             speed = speed - acceleration * Time.deltaTime;
-            //Vector3 temp = new Vector3(1, 0, 0);
-            //temp = temp.normalized * moveSpeed * Time.deltaTime;
-            //rigidbody.MovePosition(transform.position + temp);
         }
         else
         {
@@ -62,7 +59,6 @@ public class PlayerController : MonoBehaviour
         Vector3 temp = new Vector3(-1, 0, 0);
         temp = temp.normalized * speed * Time.deltaTime;
         rigidbody.MovePosition(transform.position + temp);
-        //transform.position.x = transform.position.x + speed * Time.deltaTime;
     }
 
     private void CheckJump()

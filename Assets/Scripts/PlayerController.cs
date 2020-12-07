@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.X) && isGrounded())
         {
             speed = speed - acceleration * Time.deltaTime;
             //Vector3 temp = new Vector3(1, 0, 0);

@@ -8,7 +8,7 @@ public class BallObstacle : MonoBehaviour
 
     public float timeToApplyForce = 5;
 
-    private GameObject ball;
+    public GameObject ball;
 
     private Rigidbody rigidbody;
 
@@ -17,7 +17,6 @@ public class BallObstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ball = GameObject.Find("Ball");
         rigidbody = ball.GetComponent<Rigidbody>();
         timer = timeToApplyForce;
         Vector3 vector3 = new Vector3(0, 0, forceInZ);

@@ -55,10 +55,14 @@ public class PlayerController : MonoBehaviour
             else
                 speed = 0;
         }
-
         Vector3 temp = new Vector3(-1, 0, 0);
         temp = temp.normalized * speed * Time.deltaTime;
         rigidbody.MovePosition(transform.position + temp);
+
+        if (rigidbody.position.y < -1f)
+        {
+            FindObjectOfType<Gamemanager>().EndGame();
+        }
     }
 
     private void CheckJump()

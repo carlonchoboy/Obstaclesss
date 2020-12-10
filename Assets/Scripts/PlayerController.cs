@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask Ground;
 
+    public int life;
+
+    public Gamemanager gm;
+
     private float speed = 0f;
 
     private Rigidbody rigidbody;
@@ -44,21 +48,20 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.X) && isGrounded())
         {
-            speed = speed - acceleration * Time.deltaTime;
+            speed = speed - acceleration * UnityEngine.Time.deltaTime;
         }
         else
         {
-            if (speed > decelartion * Time.deltaTime)
-                speed = speed - decelartion * Time.deltaTime;
-            else if (speed < -decelartion * Time.deltaTime)
-                speed = speed + decelartion * Time.deltaTime;
+            if (speed > decelartion * UnityEngine.Time.deltaTime)
+                speed = speed - decelartion * UnityEngine.Time.deltaTime;
+            else if (speed < -decelartion * UnityEngine.Time.deltaTime)
+                speed = speed + decelartion * UnityEngine.Time.deltaTime;
             else
                 speed = 0;
         }
-
         Vector3 temp = new Vector3(-1, 0, 0);
-        temp = temp.normalized * speed * Time.deltaTime;
-        rigidbody.MovePosition(transform.position + temp);
+        temp = temp.normalized * speed * UnityEngine.Time.deltaTime;
+        rigidbody.MovePosition(transform.position + temp);        
     }
 
     private void CheckJump()
@@ -73,6 +76,19 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded()
     {
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f, Ground.value);
-    }    
+    }
+
+    private void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "obstacle")
+        {
+            life -= 1;
+        }
+        if (life <= 0)
+        {
+            //playerController.enabled = false;
+            FindObjectOfType<Gamemanager>().EndGame();
+        }
+    }
 
 }

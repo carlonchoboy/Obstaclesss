@@ -26,7 +26,7 @@ public class BallObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer -= UnityEngine.Time.deltaTime;
         if (timer <= 0)
         {
             Vector3 vector3 = new Vector3(0, 0, forceInZ);

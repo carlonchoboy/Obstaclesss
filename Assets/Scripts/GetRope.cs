@@ -11,9 +11,12 @@ public class GetRope : MonoBehaviour
 
     private bool haveAttached = false;
 
+    private float lastPosx;
+
     // Start is called before the first frame update
     void Start()
     {
+        lastPosx = transform.position.x;
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -26,16 +29,25 @@ public class GetRope : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 haveAttached = false;
-                attached.GetComponent<Rigidbody>().AddForce(attached.transform.position, ForceMode.Acceleration);
-                attached = null;
+                //if (transform.position.x > lastPosx)
+                //{
+                //    attached.GetComponent<Rigidbody>().AddForce(attached.transform.position);
 
+                //}
+                //else
+                //{
+                //    attached.GetComponent<Rigidbody>().AddForce(attached.transform.position * -1 * 100);
+                //}
+                attached.GetComponent<Rigidbody>().AddForce(attached.transform.position);
+                attached = null;
             }
         }
+        lastPosx = transform.position.x;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             rigidbody.AddForce(transform.position, ForceMode.Impulse);
             attached = other.gameObject;

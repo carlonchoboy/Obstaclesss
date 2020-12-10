@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckJump();
+        CheckJump();        
     }
 
     private void FixedUpdate()
@@ -73,5 +73,6 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded()
     {
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f, Ground.value);
-    }
+    }    
+
 }

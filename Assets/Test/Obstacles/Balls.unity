@@ -325,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776647382}
   m_LocalRotation: {x: -0.18050675, y: -0.05691641, z: 0.0104637435, w: -0.9818699}
-  m_LocalPosition: {x: 17.583202, y: 6.9319897, z: -15.685667}
+  m_LocalPosition: {x: -90.21555, y: 6.93199, z: -15.704425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 573939755}
@@ -695,7 +695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565438803}
   m_LocalRotation: {x: -0.18050675, y: -0.05691641, z: 0.0104637435, w: -0.9818699}
-  m_LocalPosition: {x: 17.583202, y: 6.9319897, z: -15.685667}
+  m_LocalPosition: {x: -90.21555, y: 6.93199, z: -15.704425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177270068}
@@ -847,7 +847,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2599261573203569193, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.03
+      value: -91.93
       objectReference: {fileID: 0}
     - target: {fileID: 2599261573203569193, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -889,24 +889,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2599261573203569196, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2599261573203569197, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
-      propertyPath: m_Constraints
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 2599261573203569202, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
-      propertyPath: decelartion
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2599261573203569203, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2599261573203569203, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

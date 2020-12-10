@@ -11,6 +11,6 @@ public class UpdateLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lifeScore.text = "Lifes: " + player.life.ToString();
+        lifeScore.text = "Lives: " + player.life.ToString();
     }
 }

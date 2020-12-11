@@ -29,6 +29,10 @@ public class Gamemanager : MonoBehaviour
         if (Input.GetKey(KeyCode.R)){
             RestartLevel();
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void CheckDead()

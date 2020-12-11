@@ -26,6 +26,9 @@ public class Gamemanager : MonoBehaviour
     void Update()
     {
         CheckDead();
+        if (Input.GetKey(KeyCode.R)){
+            RestartLevel();
+        }
     }
 
     public void CheckDead()

@@ -359,10 +359,7 @@ MonoBehaviour:
 
     Space - Jump
 
-    R - Restart level
-
-    Esc
-    - Exit'
+    R - Restart level'
 --- !u!222 &110603245
 CanvasRenderer:
   m_ObjectHideFlags: 0

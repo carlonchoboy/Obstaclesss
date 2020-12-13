@@ -687,6 +687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameran
       objectReference: {fileID: 0}
+    - target: {fileID: 2599261573203569203, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2599261573203569202, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd350993e55cd4a2c99876b40fcb5fbe, type: 3}
